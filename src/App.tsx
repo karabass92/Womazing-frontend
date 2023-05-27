@@ -1,14 +1,20 @@
 import { Routes, Route } from 'react-router-dom'
 import routes from './constants/routes';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 
 const App = () => {
     return (
-        <Routes>
-            {
-                routes.map(route => <Route path={route.path} element={route.element} />)
-            }
-        </Routes>
+        <div>
+            <Header />
+            <Routes>
+                {
+                    routes.map(route => <Route path={route.path} element={route.element} />)
+                }
+            </Routes>
+            <Footer />
+        </div>
     );
 };
 
