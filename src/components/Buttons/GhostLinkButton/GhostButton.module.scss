@@ -1,0 +1,30 @@
+.main {
+    display: block;
+    margin-inline: auto;
+    text-align: center;
+    border: 1px solid #6E9C9F;
+    transition: all 0.5s ease;
+}
+
+.main div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #6E9C9F;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    transition: all 0.5s ease;
+}
+
+.main:hover {
+    background-color: #6E9C9F;
+    transition: all 0.5s ease;
+}
+
+.main div:hover {
+    color: #fff;
+    transition: all 0.5s ease;
+}
