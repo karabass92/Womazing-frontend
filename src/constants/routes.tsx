@@ -6,6 +6,7 @@ import Checkout from "../pages/Checkout/Checkout";
 import Contacts from "../pages/Contacts/Contacts";
 import Product from "../pages/Product/Product";
 import SuccessCheckout from "../pages/SuccessCheckout/SuccessCheckout";
+import NotFound from "../pages/NotFound/NotFound";
 
 
 const routes = [
@@ -40,6 +41,10 @@ const routes = [
     {
         path: '/succescheckout',
         element: <SuccessCheckout />
+    },
+    {
+        path: '*',
+        element: <NotFound />
     },
 ]
 
