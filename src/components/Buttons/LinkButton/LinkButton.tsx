@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import styles from './GhostButton.module.scss';
+import styles from './LinkButton.module.scss';
 
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 };
 
 
-const GhostLinkButton = ({
+const LinkButton = ({
     width,
     height,
     text,
@@ -24,8 +24,8 @@ const GhostLinkButton = ({
                 </span>
             </div>
         </NavLink>
-    );
+    )
 };
 
 
-export default GhostLinkButton;
+export default LinkButton;
