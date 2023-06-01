@@ -1,0 +1,39 @@
+.basketContainer {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    transition: all 0.5s ease;
+}
+
+.basketContainer:hover {
+    scale: 1.1;
+    transition: all 0.5s ease;
+}
+
+.productsCount {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(87, 86, 86, 0.74);
+    text-align: center;
+    font-size: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.basketLeftDot {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+}
+
+.basketrightDot {
+    position: absolute;
+    left: 6px;
+    top: 12px;
+}

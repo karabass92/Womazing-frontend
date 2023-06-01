@@ -9,7 +9,7 @@ const Logo = () => {
             <img src={logo} alt="logo" />
             <span className={styles.name}>Womazing</span>
         </NavLink>
-    )
+    );
 };
 
 
