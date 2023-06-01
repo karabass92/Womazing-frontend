@@ -1,12 +1,11 @@
-import Logo from "../../components/Logo/Logo";
-import Phone from "../../components/Phone/Phone";
+import Modal from "../../components/Modal/Modal";
 
 
 const Main = () => {
     return (
         <div>
             Main
-            
+            <Modal isOpen={true} setOpen={() => {}} />
         </div>
     )
 };

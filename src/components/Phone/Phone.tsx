@@ -9,7 +9,9 @@ type Props = {
 };
 
 
-const Phone = ({onClickHandler}: Props) => {
+const Phone = ({
+    onClickHandler
+}: Props) => {
     return (
         <button className={styles.telephoneContainer} onClick={() => onClickHandler}>
             <img src={telephone} alt="telephone" className={styles.telephone} />
