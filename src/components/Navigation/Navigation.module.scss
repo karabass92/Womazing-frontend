@@ -1,0 +1,24 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: min(436px, 100%);
+}
+
+.item {
+    width: 75px;
+}
+
+.item a:hover {
+    color: #6E9C9F;
+}
+
+.item a {
+    line-height: 200%;
+    transition: all 0.5s ease;
+}
+
+.item a.active {
+    font-weight: 700;
+    color: #6E9C9F;
+    transition: all 0.5s ease;
+}

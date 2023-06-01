@@ -1,13 +1,13 @@
-import Modal from "../../components/Modal/Modal";
+import Navigation from "../../components/Navigation/Navigation";
 
 
 const Main = () => {
     return (
         <div>
             Main
-            <Modal isOpen={true} setOpen={() => {}} />
+            <Navigation />
         </div>
-    )
+    );
 };
 
 
