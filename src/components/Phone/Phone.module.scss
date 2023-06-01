@@ -1,0 +1,38 @@
+.telephoneContainer {
+    width: 27px;
+    height: 27px;
+    position: relative;
+    background-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.telephone {
+    position: absolute;
+    left: 6px;
+    top: 5.5px;
+    transition: all 0.5s ease;
+}
+
+.telephoneContainer:hover {
+    background: #6E9C9F;
+    transition: all 0.5s ease;
+}
+
+.telephoneContainer:hover img {
+    filter: brightness(0.1) invert(1);
+    transition: all 0.5s ease;
+}
+
+.telephoneSmallWave {
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    transition: all 0.5s ease;
+}
+
+.telephoneBigWave {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    transition: all 0.5s ease;
+}
