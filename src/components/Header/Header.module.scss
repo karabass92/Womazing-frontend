@@ -1,5 +1,8 @@
 .main {
+	padding-top: 54px;
 	display: flex;
+	position: relative;
+	z-index: 10;
 	justify-content: space-between;
 	align-items: center;
 	width: min(1110px, 100%);

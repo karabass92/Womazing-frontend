@@ -23,22 +23,26 @@ const BurgerMenu = ({
                 <span></span>
             </div>
             <div className={burgerIsOpen ? `${styles.burgerNavOpened}` : `${styles.burgerNavClosed}`}>
-                <div className={styles.item}>
+                <div className={styles.item}
+                    onClick={() => setBurgerIsOpen(false)} >
                     <NavLink to='/' className={(linkClass) => linkClass.isActive
                         ? styles.active
                         : styles.item}>Главная</NavLink>
                 </div>
-                <div className={styles.item}>
+                <div className={styles.item}
+                    onClick={() => setBurgerIsOpen(false)} >
                     <NavLink to='/shop' className={(linkClass) => linkClass.isActive
                         ? styles.active
                         : styles.item}>Магазин</NavLink>
                 </div>
-                <div className={styles.item}>
+                <div className={styles.item}
+                    onClick={() => setBurgerIsOpen(false)} >
                     <NavLink to='/about' className={(linkClass) => linkClass.isActive
                         ? styles.active
                         : styles.item}>О бренде</NavLink>
                 </div>
-                <div className={styles.item}>
+                <div className={styles.item}
+                    onClick={() => setBurgerIsOpen(false)} >
                     <NavLink to='/contacts' className={(linkClass) => linkClass.isActive
                         ? styles.active
                         : styles.item}>Контакты</NavLink>

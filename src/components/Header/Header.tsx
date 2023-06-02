@@ -15,7 +15,7 @@ const Header = () => {
 
     return (
         <Fragment>
-            <header className={styles.main}>
+            <header className={styles.main} >
                 <Logo />
                 <Navigation />
                 <section>
