@@ -36,3 +36,9 @@
     top: 7px;
     transition: all 0.5s ease;
 }
+
+@media(max-width:900px){
+	.telephoneContainer {
+		display: none;
+	}
+}

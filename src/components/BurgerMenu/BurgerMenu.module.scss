@@ -1,8 +1,10 @@
 .burgerClosed {
     height: 20px;
     width: 20px;
+    margin-left: 15px;
     z-index: 100;
     position: relative;
+    display: none;
     & span {
         display: block;
         position: absolute;
@@ -41,8 +43,10 @@
 .burgerOpened {
     height: 20px;
     width: 20px;
+    margin-left: 15px;
     z-index: 100;
     position: relative;
+    display: none;
     & span {
         display: block;
         position: absolute;
@@ -115,4 +119,11 @@
         visibility: hidden;
         transition: all 0.5s ease;
     }
+}
+
+@media(max-width:900px){
+	.burgerOpened,
+    .burgerClosed {
+		display: block;
+	}
 }

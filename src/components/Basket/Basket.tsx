@@ -17,7 +17,7 @@ const Basket = ({count}: Props) => {
                     count < 10 ? count : `9+`
                 }
             </div>
-            <NavLink to='/basket'>
+            <NavLink to='/cart'>
                 <img src={basket} alt="basket" className={styles.basket} />
                 <img src={basketDot} alt="basket" className={styles.basketLeftDot} />
                 <img src={basketDot} alt="basket" className={styles.basketrightDot} />

@@ -4,22 +4,22 @@ import close from '../../assets/img/modal/close.svg';
 
 
 type Props = {
-    isOpen: boolean,
-    setOpen: Function
+    modalIsOpen: boolean,
+    setModalIsOpen: Function
 };
 
 
 const Modal = ({
-    isOpen,
-    setOpen
+    modalIsOpen,
+    setModalIsOpen
 }: Props) => {
     return (
         <Fragment>
             <div 
-                className={`${styles.overlay} ${isOpen && styles.visible}`} 
-                onClick={() => setOpen(false)}></div>
-            <div className={`${styles.modal} ${isOpen && styles.visible}`}>
-                <img src={close} alt="close" onClick={() => setOpen(false)} />
+                className={`${styles.overlay} ${modalIsOpen && styles.visible}`} 
+                onClick={() => setModalIsOpen(false)}></div>
+            <div className={`${styles.modal} ${modalIsOpen && styles.visible}`}>
+                <img src={close} alt="close" onClick={() => setModalIsOpen(false)} />
                 <h2>Заказать обратный звонок</h2>
                 <form action="#">
                     <input type="text" placeholder="Имя" />

@@ -5,15 +5,15 @@ import telephoneBigWave from '../../assets/img/phone/telephoneWaveBig.svg';
 
 
 type Props = {
-    onClickHandler: Function
+    setModalIsOpen: Function
 };
 
 
 const Phone = ({
-    onClickHandler
+    setModalIsOpen
 }: Props) => {
     return (
-        <button className={styles.telephoneContainer} onClick={() => onClickHandler}>
+        <button className={styles.telephoneContainer} onClick={() => setModalIsOpen(true)}>
             <img src={telephone} alt="telephone" className={styles.telephone} />
             <img src={telephoneSmallWave} alt="telephone" className={styles.telephoneSmallWave} />
             <img src={telephoneBigWave} alt="telephone" className={styles.telephoneBigWave} />

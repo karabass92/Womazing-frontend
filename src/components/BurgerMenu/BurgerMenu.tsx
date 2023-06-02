@@ -5,17 +5,21 @@ import { Fragment } from 'react';
 
 type Props = {
     burgerIsOpen: boolean,
-    setOpenBurger: Function
+    setBurgerIsOpen: Function,
+    setModalIsOpen: Function
 };
 
 
 const BurgerMenu = ({
     burgerIsOpen,
-    setOpenBurger
+    setBurgerIsOpen,
+    setModalIsOpen
 }: Props) => {
     return (
         <Fragment>
-            <div className={burgerIsOpen ? `${styles.burgerOpened}` : `${styles.burgerClosed}`}>
+            <div 
+                onClick={() => setBurgerIsOpen(!burgerIsOpen)}
+                className={burgerIsOpen ? `${styles.burgerOpened}` : `${styles.burgerClosed}`}>
                 <span></span>
             </div>
             <div className={burgerIsOpen ? `${styles.burgerNavOpened}` : `${styles.burgerNavClosed}`}>
@@ -39,7 +43,7 @@ const BurgerMenu = ({
                         ? styles.active
                         : styles.item}>Контакты</NavLink>
                 </div>
-                <div className={styles.item}>
+                <div className={styles.item} onClick={() => setModalIsOpen(true)}>
                     Заказать звонок
                 </div>
             </div>

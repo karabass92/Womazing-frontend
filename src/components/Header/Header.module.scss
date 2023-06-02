@@ -1,0 +1,25 @@
+.main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: min(1110px, 100%);
+	margin-inline: auto;
+	& section {
+		display: flex;
+		align-items: center;
+	}
+}		
+.telNumber {
+	margin-left: 10px;
+	margin-right: 20px;
+	line-height: 200%;
+}
+
+@media(max-width:900px){
+	.main {
+		padding: 10px;
+	}
+	.telNumber {
+		display: none;
+	}
+}
