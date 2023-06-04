@@ -22,6 +22,14 @@
     }
 }
 
+.formHeader {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    margin-bottom: 62px;
+}
+
 
 
 
@@ -61,5 +69,8 @@
             align-items: center;
             margin-right: 0;
         }
+    }
+    .formHeader {
+        text-align: center;
     }
 }

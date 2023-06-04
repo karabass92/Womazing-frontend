@@ -1,9 +1,11 @@
 import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
+import FeedbackForm from '../../components/FeedbackForm/FeedbackForm';
 import YandexMap from '../../components/YandexMap/YandexMap';
 import styles from './Contacts.module.scss';
 
 
 const Contacts = () => {
+
     return (
         <main className={styles.main}>
             <BreadCrumbs header='Контакты' />
@@ -22,6 +24,8 @@ const Contacts = () => {
                     <p>г. Москва, 3-я улица Строителей, 25</p>
                 </div>
             </section>
+            <h2 className={styles.formHeader}>Напишите нам</h2>
+            <FeedbackForm />
         </main>
     );
 };
