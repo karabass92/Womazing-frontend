@@ -1,0 +1,110 @@
+.main {
+    width: min(1110px, 100%);
+    margin-inline: auto;
+    margin-top: 269px;
+    & h1 {
+        margin-left: 3px;
+        font-weight: 500;
+        font-size: 55px;
+        line-height: 110%;
+        letter-spacing: 0.02em;
+    }
+}
+
+.path {
+    margin: 26px 0 250px 3px;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    & span {
+        color: #6b6b6b;
+    }
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 130px;
+    & h3 {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        margin-bottom: 46px;
+    }
+    & img {
+        width: min(442px, 100%);
+        height: min(547px, 100%);
+    }
+    & article {
+        width: min(542px, 100%);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    & p {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        margin-bottom: 15px;
+    }
+}
+
+.btnContainer {
+    width: 260px;
+    margin-inline: auto;
+}
+
+@media(max-width:1110px){
+    .section {
+        padding: 0 10px;
+        margin-top: 120px;
+    }
+    .path {
+        margin: 26px 0 120px 3px;
+    }
+}
+
+@media(max-width:1020px){
+    .main {
+        margin-top: 100px;
+    }
+    .section {
+        gap: 10px;
+    }
+}
+
+@media(max-width:767px){
+    .main {
+        margin-top: 50px;
+        & section {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-bottom: 75px;
+            & img {
+                width: min(767px, 100%);
+                height: min(547px, 100%);
+            }
+        }
+        & section:last-of-type {
+            flex-direction: column;
+            margin-bottom: 75px;
+        }
+        & h1 {
+            font-size: 45px;
+        }
+    }
+    .path {
+        margin-bottom: 50px;
+    }
+    .section {
+        & img {
+            width: min(767px, 100%);
+            height: min(547px, 100%);
+        }
+        & article {
+            width: min(767px, 100%);
+        }
+    }
+}
