@@ -1,0 +1,64 @@
+.wrapper {
+    background: #F1EADC;
+}
+
+.main {
+    width: min(1110px, 100%);
+    margin-inline: auto;
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px 0px;
+}
+
+.leftSide {
+    display: flex;
+    gap: 80px;
+}
+
+.generalInfo {
+    margin-top: 73px;
+    & p {
+        font-size: 13px;
+        line-height: 200%;
+        letter-spacing: 0.02em;
+    }
+}
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    & p {
+        margin-bottom: 39px;
+    }
+    & span {
+        font-size: 13px;
+        line-height: 200%;
+        letter-spacing: 0.02em;
+    }
+}
+
+.telephone {
+    text-align: right;
+    margin-bottom: 9px;
+}
+
+.email {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.socials {
+    text-align: right;
+    margin-bottom: 30px;
+    & img {
+        margin-left: 12px;
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.visa {
+    text-align: right;
+}
