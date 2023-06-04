@@ -14,7 +14,10 @@
 
 .leftSide {
     display: flex;
-    gap: 80px;
+    gap: 20%;
+    & div {
+        width: 204px;
+    }
 }
 
 .generalInfo {
@@ -61,4 +64,58 @@
 
 .visa {
     text-align: right;
+}
+
+@media(max-width:1110px){
+	.main {
+		padding: 95px 10px;
+	}
+}
+
+@media(max-width:1000px){
+    .main {
+		padding: 90px 10px;
+	}
+    .leftSide {
+        gap: 15%;
+    }
+}
+
+@media(max-width:950px){
+    .leftSide {
+        gap: 5%;
+    }
+}
+
+@media(max-width:900px){
+    .leftSide {
+        gap: 55%;
+    }
+}
+
+@media(max-width:767px){
+	.main {
+		padding: 80px 10px;
+	}
+    .leftSide {
+        gap: 35%;
+    }
+}
+
+
+@media(max-width:600px){
+	.main {
+		padding: 60px 10px 30px;
+	}
+    .leftSide {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+    }
+    .leftSide div {
+        width: 137px;
+    }
+    .generalInfo {
+        display: none;
+    }
 }

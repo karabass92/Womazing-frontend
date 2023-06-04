@@ -4,7 +4,7 @@ import instagram from '../../assets/img/footer/instagramIcon.png';
 import facebook from '../../assets/img/footer/facebookIcon.svg';
 import twiter from '../../assets/img/footer/twiterIcon.svg';
 import visa from '../../assets/img/footer/visaIcon.svg';
-import Navigation from "../Navigation/Navigation";
+import FooterNavigation from "../FooterNavigation/FooterNavigation";
 
 
 const Footer = () => {
@@ -20,18 +20,18 @@ const Footer = () => {
                             <p>Публичная оферта</p>
                         </div>
                     </div>
-                    <Navigation />
+                    <FooterNavigation />    
                 </section>
                 <section>
                     <p className={styles.telephone}>+7 (495) 823-54-12</p>
                     <p className={styles.email}>hello@womazing.com</p>
                     <div className={styles.socials}>
-                        <img src={instagram} alt="instagram" className={styles.instagram} />
-                        <img src={facebook} alt="facebook" className={styles.facebook} />
-                        <img src={twiter} alt="twiter" className={styles.twiter} />
+                        <img src={instagram} alt="instagram" />
+                        <img src={facebook} alt="facebook" />
+                        <img src={twiter} alt="twiter" />
                     </div>
                     <div className={styles.visa}>
-                        <img src={visa} alt="visa" />
+                        <img src={visa} alt="visa" className={styles.visa} />
                     </div>
                 </section>
             </footer>

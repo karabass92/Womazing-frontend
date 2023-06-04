@@ -1,0 +1,29 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 436px;
+}
+
+.item {
+    width: 75px;
+    & a {
+        line-height: 200%;
+        transition: all 0.5s ease;
+    }
+    & a:hover {
+        color: #6E9C9F;
+    }
+    & a.active {
+        font-weight: 700;
+        color: #6E9C9F;
+        transition: all 0.5s ease;
+    }
+}
+
+@media(max-width:900px){
+	.navigation {
+		flex-direction: column;
+        align-items: center;
+        width: min(75px, 100%);
+	}
+}
