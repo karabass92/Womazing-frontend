@@ -47,7 +47,7 @@ const About = () => {
                 <LinkButton width={260} height={68} text='Перейти в магазин' link='/shop' />
             </div>
         </main>
-    )
+    );
 };
 
 

@@ -1,10 +1,13 @@
-import React from 'react'
+import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
+import styles from './Checkout.module.scss';
 
 
 const Checkout = () => {
-  return (
-    <div>Checkout</div>
-  )
+    return (
+        <main className={styles.main}>
+            <BreadCrumbs header='Оформление заказа' />
+        </main>
+    );
 };
 
 

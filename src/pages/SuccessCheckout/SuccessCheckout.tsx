@@ -1,10 +1,12 @@
-import React from 'react'
+import styles from './SuccessCheckout.module.scss';
 
 
 const SuccessCheckout = () => {
-  return (
-    <div>SuccessCheckout</div>
-  )
+    return (
+        <main className={styles.main}>
+            SuccessCheckout
+        </main>
+    );
 };
 
 

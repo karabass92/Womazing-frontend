@@ -17,3 +17,27 @@
         color: #6b6b6b;
     }
 }
+
+@media(max-width:767px){
+    .breadCrumbs {
+        & h1 {
+            font-size: 45px;
+        }
+    }
+}
+
+@media(max-width:479px){
+    .breadCrumbs {
+        & h1 {
+            font-size: 35px;
+        }
+    }
+}
+
+@media(max-width:359px){
+    .breadCrumbs {
+        & h1 {
+            font-size: 30px;
+        }
+    }
+}

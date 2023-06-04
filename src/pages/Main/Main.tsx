@@ -1,12 +1,11 @@
-
-
+import styles from './Main.module.scss';
 
 
 const Main = () => {
     return (
-        <div>
-            Main 
-        </div>
+        <main className={styles.main}>
+            main
+        </main>
     );
 };
 

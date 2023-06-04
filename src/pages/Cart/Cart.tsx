@@ -1,10 +1,13 @@
-import React from 'react'
+import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
+import styles from './Cart.module.scss';
 
 
 const Cart = () => {
-  return (
-    <div>Cart</div>
-  )
+    return (
+        <main className={styles.main}>
+            <BreadCrumbs header='Корзина' />
+        </main>
+    );
 };
 
 
