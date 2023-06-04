@@ -1,17 +1,14 @@
-import { Link } from 'react-router-dom';
 import styles from './About.module.scss';
 import firstPhoto from '../../assets/img/about-page/sonnie_hiles.jpg';
 import secondPhoto from '../../assets/img/about-page/barkz.jpg';
 import LinkButton from '../../components/Buttons/LinkButton/LinkButton';
+import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
 
 
 const About = () => {
     return (
         <main className={styles.main}>
-            <h1>О бренде</h1>
-            <div className={styles.path}>
-                <Link to={'/'}>Главная</Link> — <span>О бренде</span>
-            </div>
+            <BreadCrumbs header='О бренде' />
             <section className={styles.section}>
                 <img src={firstPhoto} alt='sonnie hiles' />
                 <article>
