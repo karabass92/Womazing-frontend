@@ -1,4 +1,3 @@
-const baseUrl: string = 'http://localhost:5000/api/';
+export const baseUrl: string = 'http://localhost:5000/api/';
 
-
-export default baseUrl;
+export const staticUrl: string = 'http://localhost:5000/';
