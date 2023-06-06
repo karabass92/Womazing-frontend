@@ -1,25 +1,31 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { RootState } from './store';
 import { shopAPI } from '../api/api';
+import { IProduct } from './interfaces';
+
+
+const initialState: IProduct[] = [];
+
+
+export const getAllProducts = () => async (dispatch:Function) => {
+    const data = await shopAPI.getAllProducts();
+    dispatch(setAllProducts(data))
+};
 
 
 const shopSlice = createSlice({
     name: 'shop',
-    initialState: {
-        products: []
-    },
+    initialState,
     reducers: {
-        setAllProducts(state, action) {
-            state.products = action.payload
+        setAllProducts: (state, action) => {
+            state = action.payload;
         }
-    }
+    },
 });
 
 
-export const getAllProducts = () => async (dispatch:Function) => {
-    const response = await shopAPI.getAllProducts();
-    console.log(response)
-    dispatch(response)
-};
+export const { setAllProducts } = shopSlice.actions;
+export const selectShop = (state: RootState) => state.shop;
 
 
-export default shopSlice;
+export default shopSlice.reducer;

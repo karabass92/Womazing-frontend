@@ -1,14 +1,18 @@
 import { useEffect } from 'react';
 import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
 import styles from './Shop.module.scss';
-import { getAllProducts } from '../../store/shopSlice';
+import { getAllProducts, selectShop } from '../../store/shopSlice';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 
 
 const Shop = () => {
     
+    const dispatch = useAppDispatch();
+    const products = useAppSelector(selectShop)
+
     useEffect( ()=> {
-        getAllProducts();
-    })
+        dispatch(getAllProducts())
+    }, [])
 
     return (
         <main className={styles.main}>
