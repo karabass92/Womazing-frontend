@@ -18,7 +18,8 @@ const shopSlice = createSlice({
     initialState,
     reducers: {
         setAllProducts: (state, action) => {
-            state = action.payload;
+            state.length = 0;                 /*----варварство----*/
+            state.push(...action.payload); 
         }
     },
 });

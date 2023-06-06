@@ -2,3 +2,43 @@
     width: min(1110px, 100%);
     margin-inline: auto;
 }
+
+.productsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 65px 30px;
+    margin-bottom: 65px;
+}
+
+.countOfShownProducts {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #808080;
+    margin-bottom: 65px;
+}
+
+.paginationBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.paginationButton {
+    width: 41px;
+    height: 41px;
+    border: 1px solid #000000;
+    background: #E5E5E5;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-right: 15px;
+    transition: all 0.5s ease;
+}
+
+.activePaginationButton {
+    background: #000;
+    color: #fff;
+}

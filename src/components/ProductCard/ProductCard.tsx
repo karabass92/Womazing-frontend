@@ -30,7 +30,7 @@ const ProductCard = ({
     return (
         <div className={styles.productCard} >
             <div className={styles.productCardImgContainer} onMouseOver={() => setShow(true)}>
-                <img src={`${staticUrl} + ${productImg}`} alt={productName} className={styles.productImg}/>
+                <img src={`${staticUrl}${productImg}`} alt={productName} className={styles.productImg}/>
                 <div className={`${styles.productCardImgContainerHover} ${show && styles.show}`} 
                     onClick={()=>navigateToProductHadler(id)}
                     onMouseOut={() => setShow(false)}>
