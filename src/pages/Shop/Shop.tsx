@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { getAllProducts, selectShop } from '../../store/shopSlice';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
@@ -6,6 +6,7 @@ import ProductCard from '../../components/ProductCard/ProductCard';
 import styles from './Shop.module.scss';
 import Pagination from '../../components/Pagination/Pagination';
 import Sort from '../../components/Sort/Sort';
+import CountOfShownProducts from '../../components/CountOfShownProducts/CountOfShownProducts';
 
 
 const Shop = () => {
@@ -47,21 +48,18 @@ const Shop = () => {
     return (
         <main className={styles.main}>
             <BreadCrumbs header='Магазин' />
-
             <Sort type={type} setPage={setPage} setType={setType} />
-
-            <div className={styles.countOfShownProducts}>
-                Показано: {showProducts.length} из {filteredProducts.length} товаров
-            </div>
-
-            <div className={styles.productsContainer}>
+            <CountOfShownProducts 
+                showProductsCount={showProducts.length} 
+                generalProductsCount={filteredProducts.length} />
+            
+            <section className={styles.productsContainer}>
                 {showProducts}
-            </div>
+            </section>
 
-            <div className={styles.countOfShownProducts}>
-                Показано: {showProducts.length} из {filteredProducts.length} товаров
-            </div>
-
+            <CountOfShownProducts 
+                showProductsCount={showProducts.length} 
+                generalProductsCount={filteredProducts.length} />
             <Pagination pages={pages} page={page} setPage={setPage} />
         </main>
     );

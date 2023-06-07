@@ -10,35 +10,24 @@
     margin-bottom: 65px;
 }
 
-.countOfShownProducts {
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    color: #808080;
-    margin-bottom: 65px;
+@media(max-width:1110px){
+    .main {
+        padding: 0 10px;
+    }
 }
 
-.sortButtonContainer {
-    display: flex;
-    margin-bottom: 92px;
+@media(max-width:767px){
+    .productsContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px 20px;
+        margin-bottom: 40px;
+    }
 }
 
-.sortButtonItem {
-    padding: 19px 65px;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    border: 1px solid black;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-.sortButtonItemActive {
-    border: 1px solid black;
-    background: #000000;
-    color: #fff;
-    transition: all 0.5s ease;
+@media(max-width:479px){
+    .productsContainer {
+        grid-template-columns: 1fr;
+        grid-gap: 20px 0;
+        margin-bottom: 20px;
+    }
 }
