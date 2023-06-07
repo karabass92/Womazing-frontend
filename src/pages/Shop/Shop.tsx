@@ -5,6 +5,7 @@ import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import styles from './Shop.module.scss';
 import Pagination from '../../components/Pagination/Pagination';
+import Sort from '../../components/Sort/Sort';
 
 
 const Shop = () => {
@@ -47,43 +48,7 @@ const Shop = () => {
         <main className={styles.main}>
             <BreadCrumbs header='Магазин' />
 
-            <div className={styles.sortButtonContainer}>
-                <div className={`${styles.sortButtonItem} ${type === '' && styles.sortButtonItemActive}`}
-                    onClick={() => {
-                        setType('')
-                        setPage(1)
-                        }}>
-                    Все
-                </div>
-                <div className={`${styles.sortButtonItem} ${type === 'tshirt' && styles.sortButtonItemActive}`}
-                    onClick={() => {
-                        setType('tshirt')
-                        setPage(1)
-                        }}>
-                    Футболки
-                </div>
-                <div className={`${styles.sortButtonItem} ${type === 'sweetShot' && styles.sortButtonItemActive}`}
-                    onClick={() => {
-                        setType('sweetShot')
-                        setPage(1)
-                        }}>
-                    Свитшоты
-                </div>
-                <div className={`${styles.sortButtonItem} ${type === 'cardigan' && styles.sortButtonItemActive}`}
-                    onClick={() => {
-                        setType('cardigan')
-                        setPage(1)
-                        }}>
-                    Кардиганы
-                </div>
-                <div className={`${styles.sortButtonItem} ${type === 'smock' && styles.sortButtonItemActive}`}
-                    onClick={() => {
-                        setType('smock')
-                        setPage(1)
-                        }}>
-                    Толстовки
-                </div>
-            </div>
+            <Sort type={type} setPage={setPage} setType={setType} />
 
             <div className={styles.countOfShownProducts}>
                 Показано: {showProducts.length} из {filteredProducts.length} товаров

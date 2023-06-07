@@ -1,0 +1,23 @@
+.sortButtonContainer {
+    display: flex;
+    margin-bottom: 92px;
+}
+
+.sortButtonItem {
+    padding: 19px 65px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sortButtonItemActive {
+    border: 1px solid black;
+    background: #000000;
+    color: #fff;
+    transition: all 0.5s ease;
+}
