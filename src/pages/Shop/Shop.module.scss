@@ -19,26 +19,26 @@
     margin-bottom: 65px;
 }
 
-.paginationBlock {
+.sortButtonContainer {
     display: flex;
-    justify-content: center;
+    margin-bottom: 92px;
 }
 
-.paginationButton {
-    width: 41px;
-    height: 41px;
-    border: 1px solid #000000;
-    background: #E5E5E5;
+.sortButtonItem {
+    padding: 19px 65px;
     font-weight: 500;
     font-size: 17px;
     line-height: 140%;
-    text-align: center;
     letter-spacing: 0.02em;
-    margin-right: 15px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
     transition: all 0.5s ease;
 }
 
-.activePaginationButton {
-    background: #000;
+.sortButtonItemActive {
+    border: 1px solid black;
+    background: #000000;
     color: #fff;
+    transition: all 0.5s ease;
 }
