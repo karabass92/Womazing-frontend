@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store';
 import { shopAPI } from '../api/api';
 import { IProduct } from './interfaces';
@@ -17,9 +17,9 @@ const shopSlice = createSlice({
     name: 'shop',
     initialState,
     reducers: {
-        setAllProducts: (state, action) => {
-            state.length = 0;                 /*----варварство----*/
-            state.push(...action.payload); 
+        setAllProducts: (state, action: PayloadAction<IProduct[]>) => {
+            state = action.payload;
+            return state;
         }
     },
 });

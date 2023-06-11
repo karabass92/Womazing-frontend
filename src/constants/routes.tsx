@@ -36,7 +36,7 @@ const routes = [
     },
     {
         path: '/product/:productId',
-        element: <Product />
+        element: <Product name="name" />
     },
     {
         path: '/succescheckout',
