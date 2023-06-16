@@ -11,7 +11,7 @@
     }
 }
 
-
+/*-----------------------------------*/
 
 .importantBlock {
     display: flex;
@@ -39,7 +39,53 @@
     }
 }
 
+/*-----------------------------------*/
 
+.dreamTeamBlock {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    & img {
+        width: min(729px, 67vw);
+        height: min(487px, 44vw);
+    }
+}
+
+.dreamTeamArticle {
+    width: 255px;
+    margin: auto 0;
+    & h3 {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        margin-bottom: 28px;
+    }
+    & p {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        margin-bottom: 28px;
+    }
+}
+
+.dreamTeamBlockLink a {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #6E9C9F;
+    transition: all 0.5s ease;
+}
+
+.dreamTeamBlockLink a:hover {
+    width: 180px;
+    border-bottom: 1px solid #CEDEDF;
+    transition: all 0.5s ease;
+}
+
+/*-----------------------------------*/
 
 @media(max-width:1110px){
     .main {
@@ -49,11 +95,64 @@
 
 @media(max-width:988px){
     .importantBlock {
-        display: flex;
-        justify-content: space-between;
+        gap: 50px;
+        margin-bottom: 15%;
     }
-    
+}
+
+@media(max-width:841px) {
+    .dreamTeamBlock {
+        flex-direction: column;
+        gap: 30px;
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .dreamTeamArticle {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media(max-width:767px){
+    .main {
+        & h2 {
+            margin-bottom: 8%;
+            margin-top: 10%;
+            font-size: 35px;
+        }
+    }
+    .importantBlock {
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
     .importantItem {
-        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media(max-width:479px){
+    .main {
+        & h2 {
+            font-size: 30px;
+        }
+    }
+    .importantBlock {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .importantItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h3 {
+            margin: 20px 0 15px 0;
+        }
     }
 }
