@@ -137,6 +137,10 @@
             font-size: 35px;
         }
     }
+    .newCollectionBlock {
+        display: flex;
+        margin-bottom: 35px;
+    }
     .importantBlock {
         gap: 50px;
         flex-direction: column;
@@ -155,6 +159,11 @@
         & h2 {
             font-size: 30px;
         }
+    }
+    .newCollectionBlock {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px 0;
     }
     .importantBlock {
         gap: 20px;
