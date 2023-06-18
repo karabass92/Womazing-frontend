@@ -13,6 +13,20 @@
 
 /*-----------------------------------*/
 
+.newCollectionBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 65px 30px;
+    margin-bottom: 60px;
+}
+
+.shopLinkButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+/*-----------------------------------*/
+
 .importantBlock {
     display: flex;
     gap: 75px;

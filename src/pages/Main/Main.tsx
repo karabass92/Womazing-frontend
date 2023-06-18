@@ -1,16 +1,47 @@
+import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { getNewCollection, selectNewCollection } from '../../store/newCollectionSlice';
 import styles from './Main.module.scss';
 import important1 from '../../assets/img/main-page/important_1.png';
 import important2 from '../../assets/img/main-page/important_2.png';
 import important3 from '../../assets/img/main-page/important_3.png';
 import dreamTeam1 from '../../assets/img/main-page/dreamTeam1.jpg';
+import ProductCard from '../../components/ProductCard/ProductCard';
+import GhostLinkButton from '../../components/Buttons/GhostLinkButton/GhostLinkButton';
 
 
 const Main = () => {
+
+    const dispatch = useAppDispatch();
+    const newCollection = useAppSelector(selectNewCollection);
+
+    useEffect(() => {
+        dispatch(getNewCollection)
+    }, []);
+
+    const products = newCollection.map(product => <ProductCard
+        key={product.id}
+        id={product.id}
+        productImg={product.img}
+        productName={product.name}
+        productPrice={product.price} />);
+
     return (
         <main className={styles.main}>
             <section>slider</section>
-            <section>new collection</section>
+            <h2>Новая коллекция</h2>
+            <section className={styles.newCollectionBlock}>
+                {products}
+            </section>
+            <div className={styles.shopLinkButtonContainer}>
+                <GhostLinkButton
+                    width={243}
+                    height={63}
+                    link='/shop'
+                    text='Открыть магазин'
+                />
+            </div>
             <h2>Что для нас важно</h2>
             <section className={styles.importantBlock}>
                 <article className={styles.importantItem}>
