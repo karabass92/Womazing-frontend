@@ -9,6 +9,7 @@ import important3 from '../../assets/img/main-page/important_3.png';
 import dreamTeam1 from '../../assets/img/main-page/dreamTeam1.jpg';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import GhostLinkButton from '../../components/Buttons/GhostLinkButton/GhostLinkButton';
+import Slider from '../../components/Slider/Slider';
 
 
 const Main = () => {
@@ -17,8 +18,8 @@ const Main = () => {
     const newCollection = useAppSelector(selectNewCollection);
 
     useEffect(() => {
-        dispatch(getNewCollection)
-    }, []);
+        dispatch(getNewCollection())
+    }, [dispatch]);
 
     const products = newCollection.map(product => <ProductCard
         key={product.id}
@@ -29,7 +30,12 @@ const Main = () => {
 
     return (
         <main className={styles.main}>
-            <section>slider</section>
+            <section className={styles.carouselContainer}>
+                <div className={styles.carousel}>
+                    <Slider />
+                </div>
+
+            </section>
             <h2>Новая коллекция</h2>
             <section className={styles.newCollectionBlock}>
                 {products}

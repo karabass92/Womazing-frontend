@@ -7,7 +7,7 @@ import { IProduct } from './interfaces';
 const initialState: IProduct[] = [];
 
 
-export const getNewCollection = async (dispatch:Function) => {
+export const getNewCollection = () => async (dispatch:Function) => {
     const data = await mainPageAPI.getNewCollection();
     dispatch(setNewCollection(data))
 };

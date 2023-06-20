@@ -22,7 +22,7 @@ const Shop = () => {
 
     useEffect( ()=> {
         dispatch(getAllProducts())
-    }, []);
+    }, [dispatch]);
  
     const filteredProducts = products
         .filter(product => 
