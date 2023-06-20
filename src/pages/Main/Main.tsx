@@ -31,9 +31,7 @@ const Main = () => {
     return (
         <main className={styles.main}>
             <section className={styles.carouselContainer}>
-                <div className={styles.carousel}>
-                    <Slider />
-                </div>
+                <Slider />
 
             </section>
             <h2>Новая коллекция</h2>
