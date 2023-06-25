@@ -8,7 +8,7 @@ const instance = axios.create (
 
 
 export const productAPI = {
-    getOneProduct(productId:number) {
+    getOneProduct(productId:string) {
         try {
             return instance.get(`product/${productId}`)
                 .then(response => response.data)
