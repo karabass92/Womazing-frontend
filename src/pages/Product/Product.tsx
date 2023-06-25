@@ -1,18 +1,27 @@
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { getProduct, selectProduct } from '../../store/productSlice';
 import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
 import styles from './Product.module.scss';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 
 
-type Props = {
-    name: string,
-}
+const Product = () => {
 
+    let { productId } = useParams();
+    const dispatch = useAppDispatch();
+    const product = useAppSelector(selectProduct);
 
-const Product = ({
-    name
-}: Props) => {
+    
+    
+    useEffect( () => {
+        getProduct(Number(productId))
+    }, [productId])
+
+console.log(product)
     return (
         <main className={styles.main}>
-            <BreadCrumbs header={name} />
+            <BreadCrumbs header={'name'} />
             Product
         </main>
     );
